@@ -9,7 +9,7 @@
 # timmy = Turtle()
 # timmy.shape("turtle")
 # timmy.color("darkslategray")
-# # print(timmy)
+# print(timmy)
 #
 # my_screen = Screen()
 # print(my_screen.canvheight)
