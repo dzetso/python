@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import random
 from turtle import Turtle
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
@@ -42,3 +43,13 @@ class CarManager(Turtle):
         for no in range(NUMBER_OF_CARS):
             new_car_y_cor = random.randint(-220, 240)
             self.cars[no].goto(300 + no * 30, new_car_y_cor)
+||||||| a8d9c84
+=======
+COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
+STARTING_MOVE_DISTANCE = 5
+MOVE_INCREMENT = 10
+
+
+class CarManager:
+    pass
+>>>>>>> 40d7cfb20de8d160d5606a09f7b00b56904f59ea
