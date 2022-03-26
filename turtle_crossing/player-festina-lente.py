@@ -8,9 +8,14 @@ class Player(Turtle):
 
     def __init__(self):
         super().__init__()
-        self.penup()
-        self.goto(0, -590)
         self.color("black")
-    
+        self.shape("turtle")
+        self.penup()
+        self.setheading(90)
+        self.reset_position()
+
+    def reset_position(self):
+        self.goto(STARTING_POSITION)
+
     def move(self):
         self.forward(MOVE_DISTANCE)

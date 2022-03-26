@@ -8,22 +8,22 @@ class Gun:
         self.ammos = []
         self.current_ammo = -1
         for n in range(AMMO_COUNT):
-            new_ammo = Turtle("arrow")
+            new_ammo = Turtle("square")
             new_ammo.setheading(90)
             new_ammo.penup()
             new_ammo.color("green")
-            new_ammo.shapesize(stretch_len=0.2, stretch_wid=0.4)
+            new_ammo.shapesize(stretch_len=0.4, stretch_wid=0.2)
             self.ammos.append(new_ammo)
         self.reset_position()
     
     def reset_position(self):
         for ammo in self.ammos:
             ammo.showturtle()
-            ammo.goto(-120, -260 + (20 * AMMO_COUNT) - 20 * self.ammos.index(ammo))
+            ammo.goto(-120, -200 - 20 * self.ammos.index(ammo))
         self.current_ammo = -1
     
     def shoot(self):
-        if self.current_ammo < AMMO_COUNT - 1:
+        if self.current_ammo <= 1:
             self.current_ammo += 1
             self.ammos[self.current_ammo].goto(self.current_position)
 

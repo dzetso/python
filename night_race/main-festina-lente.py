@@ -23,14 +23,21 @@ screen.onkey(gun.shoot, "Up")
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.03)
+    time.sleep(0.06)
     block.move_blocks()
     screen.update()
     score.update_score()
     if gun.current_ammo != -1:
-        for no in range(gun.current_ammo + 1):
-            gun.ammos[no].forward(20)
-    gun.current_position = (racer.xcor(), racer.ycor())
+        if gun.current_ammo == 0:
+            gun.ammos[gun.current_ammo].forward(6)
+        elif gun.current_ammo == 1:
+            gun.ammos[gun.current_ammo].forward(6)
+            gun.ammos[gun.current_ammo - 1].forward(6)
+        else:
+            gun.ammos[gun.current_ammo].forward(6)
+            gun.ammos[gun.current_ammo - 1].forward(6)
+            gun.ammos[gun.current_ammo - 2].forward(6)
+    gun.current_position = (racer.xcor(), racer.ycor() + 13)
     # player out of the road
 
     if racer.xcor() > 100 or racer.xcor() < -100:
