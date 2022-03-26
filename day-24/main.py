@@ -2,5 +2,6 @@
 #     contents = file.read()
 #     print(contents)
 
-with open("day-24/new_file.txt", mode="w") as file:
-    file.write("New text.")
+with open("../../Desktop/my_file.txt") as file:
+    content = file.read()
+    print(content)
