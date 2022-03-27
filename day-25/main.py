@@ -15,7 +15,7 @@
 
 import pandas
 
-# data = pandas.read_csv("day-25/weather_data.csv")
+data = pandas.read_csv("day-25/weather_data.csv")
 # print(data["temp"])
 # data_dict = data.to_dict()
 # print(data_dict)
@@ -30,6 +30,8 @@ import pandas
 # print(data["temp"].sum() / data["temp"].count())
 # print(data["temp"].mean())
 # print(f"The max is {data['temp'].max()}.")
+# print minimum value of data temp
+print(f"The min is {data['temp'].min()}")
 
 # Get data in Columns
 # print(data["day"])
@@ -53,11 +55,11 @@ import pandas
 # fahrenheit = monday.temp * 1.8 + 32
 # print(fahrenheit)
 
-# creating dataframe from scratch
-data_dict = {
-    "students": ["Amy", "James", "Angela"],
-    "scores": [76, 56, 65],
-}
-data = pandas.DataFrame(data_dict)
-# print(data)
-data.to_csv("day-25/new_data.csv")
+# # creating dataframe from scratch
+# data_dict = {
+#     "students": ["Amy", "James", "Angela"],
+#     "scores": [76, 56, 65],
+# }
+# data = pandas.DataFrame(data_dict)
+# # print(data)
+# data.to_csv("day-25/new_data.csv")
